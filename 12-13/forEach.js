@@ -11,4 +11,5 @@ console.log(sum);
 data.forEach(function (v, i, a) {
     a[i] = v + 1;
 });
+
 console.log(data);
