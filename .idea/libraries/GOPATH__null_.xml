@@ -1,0 +1,57 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;null&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../gocode/src/9fans.net" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/another" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/golang.org" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/结构体" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/接口" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/mystruct" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/mymath" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/复合语句" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/gogogo" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/数组" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/shunxu" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/循环语句" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/goto" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/switch" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/mathapp" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/helloworld" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/函数" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/webgo" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/.DS_Store" />
+    </CLASSES>
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/alecthomas/gometalinter/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/kisielk/errcheck/testdata" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/sourcegraph.com/sqs/goreturns/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/kisielk/errcheck/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/sourcegraph.com/sqs/goreturns/_samples" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/9fans.net/go/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/rogpeppe/godef/go/printer/testdata" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/bradfitz/goimports/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/golang/lint/testdata" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/jstemmer/gotags/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/lukehoban/ident/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/golang/lint/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/nsf/gocode/_gccgo" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/lukehoban/go-outline/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/nsf/gocode/_goremote" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/lukehoban/go-find-references/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/nsf/gocode/_testing" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/gopkg.in/alecthomas/kingpin.v2/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/alecthomas/units/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/astaxie/beedb/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/rogpeppe/godef/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/nsf/gocode/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/alecthomas/template/testdata" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/alecthomas/template/.git" />
+      <root url="file://$PROJECT_DIR$/../gocode/src/github.com/kisielk/gotool/.git" />
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
