@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #catapult { width: 500px; height: 500px; position: fixed; overflow: hidden;background: #000; z-index:10; }
+        #close{color: #fff;}
+        .btn{background: url(XXXXX) no-repeat;}
+    </style>
+</head>
+<body>
+<button class="btn"></button>  
+<a id="btn">sfsdf</a>
+<div id="catapult">
+    <a id="close">X</a>
+</div>
+<script>
+    window.onload = function () {
+        var cata = document.getElementById('catapult');
+        var btn = document.getElementById('btn');
+        var close = document.getElementById('close');
+        var sWidth =document.body.offsetWidth;
+        var sHeight = document.body.scrollHeight;
+        var cWidth =cata.offsetWidth;
+        var cHeight = cata.offsetHeight;
+
+        cata.style.left = sWidth/2 - cWidth/2 +'px';
+        cata.style.top = sHeight/2 - cHeight/2 +'px';
+
+        btn.addEventListener('click',function(){
+            cata.style.display="block"
+        });
+        close.addEventListener('click',function(){
+            cata.style.display="none"
+        })
+
+    }
+</script>
+</body>
+</html>
