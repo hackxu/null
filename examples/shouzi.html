@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #a{text-indent: 15px}
+        #b{text-indent: -6px}
+        #c{text-indent: 0.5em}
+        #a:first-letter{font-size: 14px;color: #B23AEE; float: left;}
+        #b:first-letter{font-size: 30px;color: red}
+        #c:first-letter{font-size: 25px;color: #B23AEE}
+        /*p.uppercase:first-letter{text-transform: uppercase}*/
+        ::selection{ color: #ffffff;background: #000}
+        ::-moz-selection{ color: #ffffff;background: #cccccc}
+        #d{box-shadow: 1px 1px 2px 2px #ccc;color: rgba(0,0,0,0);text-shadow: 0 0 10px black}
+        .gold{color: white;background: black; font-weight: bold;font-size: 30px; position: relative;}
+        span.gold{width: 100%; height: 100%; position: absolute;background: linear-gradient(to bottom,black 0%,transparent 50%,black); opacity: 0.5;}
+        #search2{ position: relative;padding-top: 3px; height: 35px;width: 330px}
+        #input2{ left: 2px; position: absolute;font-size: 20px;width: 240px; height: 25px;border: 0;background: #fff;border: 1px solid #ccc;}
+        #go{font-size: 14px; color: #ffffff; position: absolute; left: 258px;width: 70px; height: 30px; cursor: pointer;border: 0;background: #4876ff;border: 1px solid;border-radius: 5px}
+        .weibodiv{width: 600px;margin: 20px auto}
+        .ad{ display: block;width: 291px; height: 30px; float: left;}
+        .adtext{ position: relative; float: right; line-height: 30px; top: 10px;}
+        p{ float: right;}
+        .weibotext{margin: 5px auto; float: left; top: 30px;}
+        textarea{width: 590px; height: 150px;font-size: 16px; overflow: auto;}
+        .post{ display: block; color: #ffffff; float: right; border: 1px solid;width: 80px; height: 30px;text-align: center;text-decoration: none; line-height: 30px;margin: 3px;border-radius: 5px;font-size: 16px; font-weight: bold; letter-spacing: 5px;background: #8BC528; cursor: pointer;;}
+    #weibotextnum{ opacity: 0;}
+        #weibotextnumber{ font-family: Bell MT;font-size: 20px}
+    </style>
+</head>
+<body>
+<div id="a" class="uppercase">if妇产科妇产科妇产科妇产科妇产科</div>
+<div id="b">if妇产科妇产科妇产科妇产科妇产科</div>
+<div id="c">if妇产科妇产科妇产科妇产科妇产科</div>
+<div id="d">双方建立科技分身乏术分</div>
+<div class="gold"><span>我是短发就拉开房间打开肌肤</span></div>
+<div id="search2">
+    <input type="text" id="input2"/>
+    <input type="text" id="go"/>
+</div>
+<div class="weibodiv">
+    <a href="###" class="ad"></a>
+    <a href="###" class="adtext">点击幸运按钮，赢取马上好礼</a>
+    <div class="weibotext">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p id="weibotextnum"><span id="weibotextnumber">140</span>字</p>
+    </div>
+    <span id="weibobottomlinks"><img src="" alt=""/></span>
+    <a class="post">广播</a>
+</div>
+<script>
+    window.onload = function(){
+        var oT= document.getElementsByTagName("textarea")[0];
+        var weibotext = document.getElementsByClassName("weibotext")[0];
+        var weibotextnum = document.getElementById("weibotextnum");
+        var weibotextnumber = document.getElementById("weibotextnumber");
+        var oA=document.getElementsByClassName("post")[0]
+        var ie = !-[1,];
+        oT.onfocus = function(){
+            oT.style.border = "1px solid #40E0D0";
+            oT.style.boxShadow="0 0 10px #5CACEE";
+            weibotextnum.style.opacity="1";
+            var num =Math.cell(getLength(oT.value)/2);
+            if(num==""){
+                oA.style.background="#7f7f7f";
+            }
+        };
+        oT.onblur = function(){
+            oT.style.boxShadow="";
+            weibotextnum.style.opacity="0";
+            oA.style.background="#8BC528"
+        }
+        oA.onmouseover = function(){
+            oT.blur();
+            oA.style.background="#7CCD7C";
+        }
+    }
+</script>
+</body>
+</html>
