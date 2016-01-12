@@ -20,3 +20,5 @@ A([function () {
 }], function () {
     console.log('callback')
 });
+
+
