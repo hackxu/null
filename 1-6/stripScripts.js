@@ -28,7 +28,7 @@ function stripTags(target) {
 
 //替换html里面的符号为页面显示的内容
 function escapeHTML(target){
-    return target.replace(/&/g,'&amp;')
+    return target.reple(/&/g,'&amp;')
         .replace(/</g,'&lt;')
         .replace(/>/g,'&gt;')
         .replace(/"/g,'&quot;')
