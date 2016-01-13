@@ -4,7 +4,7 @@
 function A(List, callback) {
     setTimeout(function () {
         var task = List.shift();
-        task(); //执行函数
+        task(); //执行函
         if (task.length > 0) {  //递归分解
             setTimeout(arguments.callee, 1000)
         } else {
