@@ -4,7 +4,7 @@
 require.config({
     baseUrl:"deploy",
     paths :{
-        "vue":"js/vue",
+        "vue":"../common/js/vue",
         "one":"js/one",
         "jquery":"js/jquery"
     }
