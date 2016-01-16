@@ -1,0 +1,21 @@
+$nav-color:#ccc;
+li{
+  $width:100px;
+  width: $width;
+  background: $nav-color;
+  &:hover{background: #fff;}
+}
+
+table{
+ border: 1px solid $nav-color;
+  tr{
+    td{width: 25%; height:auto; overflow: hidden;background: #8BC528}
+  }
+}
+#content {
+  article {
+    h1 { color: #333 }
+    p { margin-bottom: 1.4em }
+  }
+   aside { background-color: #EEE }
+}

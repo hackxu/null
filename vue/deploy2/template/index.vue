@@ -2,7 +2,7 @@
         <li v-for="ite in items">
             {{ite.message}}
         </li>
-        <table>
+        <table cellpadding="1" cellspacing="1">
             <tr v-for="book in books ">
                 <td>{{book.id}}</td>
                 <td>{{book.name}}</td>
@@ -11,9 +11,11 @@
             </tr>
         </table>
 </template>
-
 <script>
-
+//    require("!css!sass!../css/one.scss");
+//require("style!css../css/css.css");
+//import css from "../css/css.css";
+import one from "../css/one.scss";
     export default {
         ready: function () {
             this.$http.get("./test1.json").then(function (response) {
@@ -33,11 +35,3 @@
         }
     }
 </script>
-
-<style >
-    .test{
-    h1{
-        text-align: center;
-    }
-    }
-</style>

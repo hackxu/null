@@ -1,0 +1,22 @@
+li {
+    width: 100px;
+    background: #ccc; }
+li:hover {
+    background: #fff; }
+
+table {
+    border: 1px solid #ccc; }
+table tr td {
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    background: #8BC528; }
+
+#content article h1 {
+    color: #333; }
+
+#content article p {
+    margin-bottom: 1.4em; }
+
+#content aside {
+    background-color: #EEE; }
