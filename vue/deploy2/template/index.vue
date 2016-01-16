@@ -33,3 +33,11 @@
         }
     }
 </script>
+
+<style >
+    .test{
+    h1{
+        text-align: center;
+    }
+    }
+</style>
