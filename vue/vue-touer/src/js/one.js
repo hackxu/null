@@ -1,7 +1,8 @@
 /**
  * Created by bluexu on 16/1/15.
  */
-var Vue = require('vue');
+var Vue = require('../../../node_modules/vue/dist/vue.min');
+//import Vue from '../../../node_modules/vue/dist/vue.min'
 var VueRouter = require("vue-router");
 Vue.use(require("vue-resource"));
 Vue.use(VueRouter);

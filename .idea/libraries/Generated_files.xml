@@ -1,11 +1,5 @@
 <component name="libraryTable">
   <library name="Generated files" type="javaScript">
-    <properties>
-      <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/vue/deploy/js/one-compiled.js" />
-        <item url="file://$PROJECT_DIR$/vue/deploy/js/one-compiled.js" />
-      </sourceFilesUrls>
-    </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/12-16/range-compiled.js" />
       <root url="file://$PROJECT_DIR$/vue/deploy/js/one-compiled.js" />
