@@ -1,9 +1,9 @@
 /**
  * Created by bluexu on 16/1/18.
  */
-//var Vue = require('vue');
-//Vue.use(require('vue-resource'));
-//Vue.use(require('vue-validator'));
+var Vue = require('../../node_modules/vue/dist/vue.min');
+Vue.use(require('../../node_modules/vue-resource/dist/vue-resource.min'));
+Vue.use(require('../../node_modules/vue-validator/dist/vue-validator.min'));
 Vue.config.debug = true;
 
 function GetQueryString(name) {
@@ -33,6 +33,7 @@ var main = new Vue({
             chea: false,
             male: true,
             female: false,
+            one:client
         },
         error: {},
         user: {
