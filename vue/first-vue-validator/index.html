@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>活动</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/Jquery.Query.js"></script>
+    <script src="js/rem.js"></script>
+    <style>
+        * { margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        img { border: none; }
+        input{border-radius: 0;}
+        body { font-family: "Microsoft Yahei" }
+        ul, li { list-style-type: none; }
+        #main { max-width: 640px; height: auto; overflow: hidden; margin: 0 auto; }
+        .thanks { margin-top: .25rem; width: 100%; height: auto; overflow: hidden; }
+        .thanks-title { font-size: .9rem; text-align: center; line-height: 1.8rem; }
+        .thanks-span { font-size: .6rem; text-align: center; width: 100%; }
+        .act-form { height: auto; width: 100%; overflow: hidden; }
+        .act-input { width: 85.625%; overflow: hidden; margin: 0 auto; }
+        .act-form li { height: auto; width: 100%; overflow: hidden; margin-top: 1.2rem; word-break: break-all; word-wrap: break-word; }
+        .act-input li span { width: 2.3rem; letter-spacing: .4rem; height: 1.425rem; font-size: .7rem; display: block; float: left; line-height: 1.5rem; }
+        .act-input li b { line-height: 1.5rem; font-size: .7rem; float: left; }
+        .act-input li input { float: right; border: none; border-bottom: 1px solid #d6d6d6; height: 1.425rem; width: 72%; padding-left: 3%; font-size: .7rem; }
+        .act-input li strong { width: 3.55rem; height: 1.425rem; display: block; background: #d6d6d6; float: left; font-size: .7rem; margin-left: 2rem; color: #fff; text-align: center; line-height: 1.425rem; border-radius: 5px; }
+        .no-letter { letter-spacing: 0 !important; }
+        input[type=number] { -moz-appearance: textfield; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .check { line-height: 1rem; font-size: .6rem; width: 85.625% !important; margin: 0 auto; padding-left: 1%; }
+        .check img { float: left; }
+        .act-submit { height: 4.75rem; border-top: 1px solid #d6d6d6; width: 100%; background: #f0f0f0; }
+        .act-submit button { width: 87.3%; height: 1.625rem; border-radius: 5px; background: #f4596b; border: none; font-size: .9rem; color: #Fff; line-height: 1.625rem; text-align: center; margin: 1.56rem auto; display: block; }
+        .act-input div { height: 1rem; overflow: hidden; color: #ff0000; float: right; width: 74%; line-height: 1rem; font-size: .6rem; margin-top: .5rem; display: none; }
+        .blue { background: #33d6ff !important; }
+        .yellow { background: #f8b037 !important; }
+        .hui { background: #d6d6d6 !important; }
+        .check input { visibility: hidden }
+        .sex input{display: none;}
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="thanks">
+        <p class="thanks-title">感谢您对活动的支持</p>
+        <p class="thanks-span">请留下您的资料,以便我们与您沟通活动相关事宜</p>
+    </div>
+    <div class="act-form">
+        <form action="">
+            <div class="act-input">
+                <li><span>姓名</span><b>:</b><input class="name" type="text">
+                    <div>请检查姓名是否拼写正确</div>
+                </li>
+                <li><span class="no-letter">手机号</span><b>:</b><input class="phone" type="number">
+                    <div>请检查手机号码是否拼写正确</div>
+                </li>
+                <li class="sex"><span>性别</span><b>:</b><input type="radio" checked name="sex" value="男"><strong class="man blue">男</strong><input type="radio" name="sex" value="女"><strong
+                        class="girl" data-value="b">女</strong>
+                    <div>请选择性别</div>
+                </li>
+                <li><span>职业</span><b>:</b><input class="job" type="text">
+                    <div>请检查职业是否拼写正确</div>
+                </li>
+                <li><span class="more-letter">QQ</span><b>:</b><input class="QQ" type="number">
+                    <div>请检查QQ是否拼写正确</div>
+                </li>
+                <li><span>地址</span><b>:</b><input class="adress" type="text">
+                    <div>请检查地址是否拼写正确</div>
+                </li>
+                <li><span>邮箱</span><b>:</b><input class="email" type="email">
+                    <div>请检查邮箱是否拼写正确</div>
+                </li>
+            </div>
+            <li class="check"><input type="checkbox"><img class="checkbox" src="images/1.png" alt="">同意将个人信息用于"南京掌上公交"相关事宜我们将为您保密
+            </li>
+            <div class="act-submit">
+                <button disabled="disabled" type="button" class="hui btn">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+        var euid = $.query.get('euid') ;
+        var client = $.query.get('client') ;
+//        var client = "ios" ;
+//        var euid = "Yic JXXb Ls=";
+        var xdr2 = new XMLHttpRequest();
+        xdr2.onload = function(){
+            var data = JSON.parse(xdr2.responseText);
+            if(data.success){
+                $('.name').val(data.data.UserName);
+                $('.phone').val(data.data.Login);
+            }
+            else{
+               console.log(data.msg);
+            }
+        };
+        xdr2.open('GET', 'http://goods.inj100.com/api/v2/activity/user?euid='+euid, true);
+        xdr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xdr2.send(null);
+        $('act-input').find('div').hide();
+
+        $('.btn').click(function () {
+            var name = $('.name').val();
+            var adress = $('.adress').val();
+            var QQ = $('.QQ').val();
+            var job = $('.job').val();
+            var phone = $('.phone').val();
+            var email = $('.email').val();
+            var sexValue = $('input[name="sex"]:checked ').val();
+            if (name == "") {
+                $('.name').next('div').show();
+                return false;
+            } else if (adress == "") {
+                $('.adress').next('div').show();
+                return false;
+            } else if (QQ == "" || QQ.length < 5) {
+                $('.QQ').next('div').show();
+                return false
+            }else if (phone == "") {
+                $('.phone').next('div').show();
+                return false
+            }else if (email == "" ) {
+                $('.email').next('div').show();
+                return false
+            } else if (job == "") {
+                $('.job').next('div').show();
+                return false;
+            } else {
+/*
+                var pd = "name="+encodeURIComponent(name)+ "&phone=" + encodeURIComponent(phone) + "&career=" +encodeURIComponent(job)
+                        +"&QQ=" + encodeURIComponent(QQ) +"&address=" +encodeURIComponent(adress) +"&email="+encodeURIComponent(email)
+                        +"&sex="+encodeURIComponent(sexValue)+"&euid="+encodeURIComponent(euid);
+*/
+                var pd = {
+                    name: name,
+                    phone:phone,
+                    career:job,
+                    qq:QQ,
+                    address:adress,
+                    email:email,
+                    sex:sexValue,
+                    euid:euid,
+                    client:client
+                };
+                var xdr = new XMLHttpRequest();
+                xdr.onload = function(){
+                    var data = JSON.parse(xdr.responseText);
+                    if(data.success){
+                       console.log(data.msg);
+                    }
+                    else{
+                       console.log(data.msg);
+                    }
+                };
+                xdr.open('POST', 'http://goods.inj100.com/api/v2/activity', true);
+                xdr.setRequestHeader("Content-Type", "application/json");
+//                xdr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xdr.send(JSON.stringify(pd));
+                $('act-input').find('div').hide();
+            }
+        });
+        $('.name').blur(function () {
+            if ($(this).val() == "") {
+                $(this).next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        $('.adress').blur(function () {
+            if ($(this).val() == "") {
+                $('.adress').next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        $('.QQ').blur(function () {
+            if ($(this).val() == "") {
+                $('.QQ').next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        $('.job').blur(function () {
+            if ($(this).val() == "") {
+                $('.job').next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        $('.man').click(function () {
+            $(this).addClass('blue').siblings().removeClass('yellow');
+            $(this).prev('input').click();
+            var val_payPlatform = $('input[name="sex"]:checked ').val();
+           console.log(val_payPlatform)
+        });
+        $('.girl').click(function () {
+            $(this).addClass('yellow').siblings().removeClass('blue');
+            $(this).prev('input').click();
+            var val_payPlatform = $('input[name="sex"]:checked ').val();
+           console.log(val_payPlatform)
+        })
+        var re = /^1[34578]\d{9}$/;
+        $('.phone').change(function () {
+            if (!re.test($(this).val())) {
+                $(this).next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        var em = /^(\w)+(\.\w+)*@((\w+\.)+)(\w){2,4}$/;
+        $('.email').blur(function () {
+            if (!em.test($(this).val()) || $(this).val() == "") {
+                $(this).next('div').show();
+            } else {
+                $(this).next('div').hide();
+            }
+        });
+        $('.checkbox').click(function () {
+            if ($(this).attr('src') == "images/1.png") {
+                $(this).attr('src', "images/2.png");
+                $(this).prev('input').click();
+                $('.act-submit').find('button').removeAttr('disabled').removeClass('hui')
+
+            } else {
+                $(this).attr('src', "images/1.png");
+                $(this).prev('input').click();
+                $('.act-submit').find('button').attr('disabled', 'disabled').addClass('hui')
+            }
+        });
+    })
+</script>
+</body>
+</html>
