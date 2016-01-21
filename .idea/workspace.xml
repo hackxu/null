@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92362cd1-9478-42f1-bddc-7227b0542081" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/images/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/images/2.png" />
+    <list default="true" id="92362cd1-9478-42f1-bddc-7227b0542081" name="Default" comment="vue表单" />
+    <list id="9ba36232-6a0e-4c54-9c4d-89dbe3181c21" name="New changelist" comment="New changelist">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/boom/images/boom.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/browserify-zlib/test/fixtures/person.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/fsevents/build/Release/.node" />
@@ -234,21 +233,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/tar/test/dir-normalization.tar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/tar/test/fixtures.tgz" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/vue-router/dist/vue-router.min.js.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/deploy/build/one.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/deploy2/src/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/deploy2/src/js/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/deploy2/src/js/one.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/deploy2/src/js/onemin.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/js/Jquery.Query.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/js/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/js/rem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/view/app.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/view/one.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/first-vue-validator/webpack.config.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/.bin/babylon" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/.bin/browserslist" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/.bin/cleancss" />
@@ -9720,19 +9704,18 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/yargs/lib/usage.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/yargs/lib/validation.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/node_modules/yargs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/vue-touer/build/js/indexbundle.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/1-11/mongod/Schema.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/1-11/mongod/index1.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/1-11/mongod/validate.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/666/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/666/index2.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/666/index3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vue/deploy3/template/FOo.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="null.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9762,8 +9745,8 @@
       <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/vue-touer/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48021108">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.015831135">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -9926,38 +9909,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="null" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="null" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="null" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="null" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first-vue-validator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -10107,6 +10058,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="92362cd1-9478-42f1-bddc-7227b0542081" name="Default" comment="" />
+      <changelist id="9ba36232-6a0e-4c54-9c4d-89dbe3181c21" name="New changelist" comment="" />
       <created>1450096038572</created>
       <option name="number" value="Default" />
       <updated>1450096038572</updated>
@@ -10165,22 +10117,28 @@
       <option name="project" value="LOCAL" />
       <updated>1453300900095</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="vue表单">
+      <created>1453342234199</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1453342234199</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15053004" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15053004" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39851484" sideWeight="0.5027855" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39745224" sideWeight="0.5027855" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738853" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -10576,8 +10534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/vue-touer/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48021108">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.015831135">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
