@@ -1,0 +1,28 @@
+<!--一个带有 defer 属性的<script>标签可以放置在文档的任何位置。对应的 JavaScript 文件将在<script>被解析 时启动下载,但代码不会被执行,-->
+<!--直到 DOM 加载完成(在 onload 事件句柄被调用之前)。当一个 defer 的 JavaScript 文件被下载时,它不会阻塞浏览器的其他处理过程,所以这些-->
+<!--文件可以与页面的其他资源一 起并行下载。 任何带有 defer 属性的<script>元素在 DOM 加载完成之前不会被执行,不论是内联脚本还是外部脚本-->
+<!--文件-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>defer</title>
+</head>
+<!--在此测试的顺序却是从上到下,所以书有可能不准确-->
+<body>
+<script defer>
+    alert("defer")
+</script>
+<script>
+    alert("script")
+</script>
+<script>
+    window.onload = function () {
+        alert("load")
+    }
+</script>
+
+</body>
+</html>
+
