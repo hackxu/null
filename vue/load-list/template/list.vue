@@ -1,7 +1,7 @@
 <template>
     <!--<div>{{msg}}</div>-->
     <div v-for="day in msg.List">
-        <span>{{day.Day}}</span>
+        <span class="time">{{day.Day}}</span>
         <div v-for="list in day.List">
             <!--<span>{{list.BlockStart}}</span>-->
             <div v-for="info in list.List">
@@ -13,7 +13,8 @@
 
 
 </template>
-<style>
+<style >
+.time{ width:100%; height:40px;display: block; line-height:40px;}
 </style>
 <script>
     export default{
