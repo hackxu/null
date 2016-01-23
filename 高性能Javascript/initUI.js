@@ -16,4 +16,5 @@ function initUI() {
     bd.className = "active";
 }
 
+
 //用局部变量存储本地范围之外的变量值,如果它们在函数中的使用多于一次
