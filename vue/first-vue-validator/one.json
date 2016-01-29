@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "Avatar": "http://q.inj100.com/data/upload/avatar/78/c6/24/original_100_100.jpg",
+      "UserID": 130209,
+      "UserName": "满天星",
+      "Count": 10,
+      "Up": true,
+      "Index": 0
+    },
+    {
+      "Avatar": "http://q.inj100.com/data/upload/avatar/69/d6/95/original_100_100.jpg",
+      "UserID": 150405,
+      "UserName": "Mo9",
+      "Count": 10,
+      "Up": true,
+      "Index": 1
+    },
+    {
+      "Avatar": "http://q.inj100.com/data/upload/avatar/c2/f0/09/original_100_100.jpg",
+      "UserID": 145647,
+      "UserName": "迷路",
+      "Count": 10,
+      "Up": true,
+      "Index": 2
+    },
+    {
+      "Avatar": "http://q.inj100.com/data/upload/avatar/8a/14/74/original_100_100.jpg",
+      "UserID": 164905,
+      "UserName": "90路晚上太少了",
+      "Count": 10,
+      "Up": true,
+      "Index": 3
+    },
+    {
+      "Avatar": "http://q.inj100.com/data/upload/avatar/8d/9a/9c/original_100_100.jpg",
+      "UserID": 167796,
+      "UserName": "hh_city",
+      "Count": 10,
+      "Up": true,
+      "Index": 4
+    }
+  ],
+  "msg": "获取成功",
+  "success": true
+}

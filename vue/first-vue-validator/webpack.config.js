@@ -2,9 +2,12 @@
  * Created by bluexu on 16/1/18.
  */
 module.exports= {
-    entry:"./view/one.js",
+    entry:{
+        index:"./view/one.js",
+        snatchladder:"./view/two.js"
+    },
     output:{
         path:"./",
-        filename:"index.js"
+        filename:"[name].js"
     }
 };

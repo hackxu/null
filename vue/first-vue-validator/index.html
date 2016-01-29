@@ -86,14 +86,31 @@
     $(function () {
         var euid = $.query.get('euid') ;
         var client = $.query.get('client') ;
+        console.log(euid)
 //        var client = "ios" ;
 //        var euid = "Yic JXXb Ls=";
         var xdr2 = new XMLHttpRequest();
         xdr2.onload = function(){
             var data = JSON.parse(xdr2.responseText);
             if(data.success){
-                $('.name').val(data.data.UserName);
-                $('.phone').val(data.data.Login);
+                console.log(data)
+                $('.name').val(data.data.Name);
+                $('.phone').val(data.data.Phone);
+                if(data.data.Sex == "女"){
+                    $('.girl').addClass('yellow').siblings().removeClass('blue');
+                    $('.girl').prev('input').click();
+                    var val_payPlatform = $('input[name="sex"]:checked ').val();
+                    console.log(val_payPlatform)
+                }else if (data.data.Sex == "男"){
+                    $('.man').addClass('blue').siblings().removeClass('yellow');
+                    $('.man').prev('input').click();
+                    var val_payPlatform = $('input[name="sex"]:checked ').val();
+                    console.log(val_payPlatform)
+                }else{
+                    console.log('为空')
+                }
+                $(".job").val(data.data.Career)
+
             }
             else{
                console.log(data.msg);
