@@ -7,13 +7,21 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
     <title>Title</title>
-    <style>
-        *{margin: 0;padding: 0;}
-        .one{ width:23px;height: 23px; overflow: hidden; background: url("images/number.png") no-repeat}
-    </style>
 </head>
 <body>
-<div class="one">
-</div>
+<script>
+    var chenhao = {
+        name: "chenhao",
+        email: "haol@d.com",
+        website: "www.google.com"
+    };
+    var sayHello = function () {
+        var hello = "hell" + this.name + this.email + this.website;
+        console.log(hello)
+    }
+    chenhao.Hello = sayHello;
+    chenhao.Hello();
+
+</script>
 </body>
 </html>

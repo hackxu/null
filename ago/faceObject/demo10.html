@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Person = Object.create(null);
+    Object.defineProperties(
+            Person, {
+                'name': {value: 'Chen Hao'},
+                'email': {value: 'one@qq.com'},
+                'website': {value: 'http://coolshell.cn'}
+            }
+    );
+    Person.sayHello = function () {
+        var hello = "<p>Hello, I am " + this.name + ",   " +
+                "my email is: " + this.email + ",   " +
+                "my website is: " + this.website;
+        console.log(hello)
+    };
+    var Student = Object.create(Person);
+    Student.no = "2123123";
+    Student.dept = "computer science";
+
+    console.log(Student.name + " " + Student.email + Student.website);
+
+    Student.sayHello();
+
+    //重载SayHello方法
+    Student.sayHello = function (person) {
+        var hello = "<p>Hello, I am " + this.name + "  " +
+                "my email is: " + this.email + "  " +
+                "my website is: " + this.website + "  " +
+                "my student no is: " + this.no + "  " +
+                "my departent is: " + this.dept;
+        console.log(hello);
+    }
+
+    //再次调用
+    Student.sayHello();
+
+    //查看Student的属性（只有 no 、 dept 和 重载了的sayHello）
+    console.log('<p>' + Object.keys(Student) + '<br>');
+
+    Student.name = 'aaa';
+
+    //输出啊aaa
+    console.log(Student.name)
+
+    // 输出 。。。。
+    console.log(Object.getPrototypeOf(Student).name)
+
+
+    //新版的重载SayHello方法
+    Student.sayHello = function (person) {
+        Object.getPrototypeOf(this).sayHello.call(this);
+        var hello = "my student no is: " + this.no + ", <br>" +
+                "my departent is: " + this.dept;
+        console.log(hello)
+    }
+
+</script>
+</body>
+</html>

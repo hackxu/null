@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var plus = function (x, y) {
+        console.log(x + '+' + y + '=' + (x + y))
+        return x + y;
+    };
+    var minus = function (x, y) {
+        console.log(x + '-' + y + '=' + (x - y))
+        return x - y;
+    }
+
+    var operations = {
+        '+': plus,
+        '-': minus
+    }
+
+    var calculate = function (x, y, opertion) {
+        return operations[opertion](x, y);
+    }
+    calculate(12, 4, '+')
+
+
+    var Cal = function (x, y) {
+        this.x = x;
+        this.y = y;
+    };
+    Cal.prototype.operations = {
+        '+': function (x, y) {
+            console.log(x + y);
+            return x + y
+        },
+        '-': function (x, y) {
+            console.log(x - y);
+            return x - y
+        }
+    }
+    Cal.prototype.calculate = function (operation) {
+        return this.operations[operation](this.x, this.y);
+    }
+
+    var sum = new Cal(4, 5);
+
+    console.log(sum)
+    sum.calculate('+');
+    sum.calculate('-');
+
+</script>
+</body>
+</html>

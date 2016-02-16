@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建对象
+    var chenhao = Object.create(null);
+
+    //    设置一个属性
+    Object.defineProperty(chenhao,
+            "name",
+            {
+                value: "Chen Hao",
+                writable: true,
+                configureable: true,
+                enummerable: true
+            });
+
+    //设置多个属性
+    Object.defineProperties(chenhao,
+            {
+                'email': {
+                    value: 'haoel@hotmail.com',
+                    writable: true,
+                    configurable: true,
+                    enumerable: true
+                },
+                'website': {
+                    value: 'http://coolshell.cn',
+                    writable: true,
+                    configurable: true,
+                    enumerable: true
+                }
+            }
+    );
+
+    //    writable：这个属性的值是否可以改。
+    //    configurable：这个属性的配置是否可以改。
+    //    enumerable：这个属性是否能在for…in循环中遍历出来或在Object.keys中列举出来。
+    //    value：属性值。
+    //    get()/set(_value)：get和set访问器
+
+    var age = 0;
+    Object.defineProperty(chenhao,
+            'age', {
+                get: function () {
+                    return age + 1
+                },
+                set: function (value) {
+                    age = value;
+                },
+                enumerable: true,
+                configurable: true
+            }
+    );
+    chenhao.age = 100;
+    console.log(chenhao.age);
+    console.log(age);
+    Object.defineProperty(chenhao,
+            'birth_year', {
+                get: function () {
+                    var d = new Date();
+                    var y = d.getFullYear();
+                    return (y - this.age);
+                },
+                set: function (year) {
+                    var d = new Date();
+                    var y = d.getFullYear();
+                    this.age = y - year;
+                }
+            }
+    );
+    console.log(chenhao);
+    console.log(chenhao.birth_year);
+
+    //    列出对象的属性
+    function listProperties(obj) {
+        var newLine = "   ";
+        var names = Object.getOwnPropertyNames(obj);
+        for (var i = 0; i < names.length; i++) {
+            var prop = names[i];
+            console.log(prop + newLine);
+
+            // 列出对象的属性配置（descriptor）动用getOwnPropertyDescriptor函数。
+            var descriptor = Object.getOwnPropertyDescriptor(obj, prop);
+            for (var attr in descriptor) {
+                console.log("..." + attr + ":" + descriptor[attr]);
+                console.log(newLine)
+            }
+            console.log(newLine)
+        }
+    }
+    listProperties(chenhao)
+
+</script>
+</body>
+</html>

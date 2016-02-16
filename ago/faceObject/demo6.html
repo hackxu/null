@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 声明 Person 类
+    var Person = Class.extend({
+        _issleeping: true,
+        init: function (name) {
+            this._name = name;
+        },
+        isSleeping: function () {
+            return this._issleeping;
+        }
+    });
+    // 声明 Programmer 类，并继承 Person
+    var Programmer = Person.extend({
+        init: function (name, issleeping) {
+            // 调用父类构造函数
+            this._super(name);
+            // 设置自己的状态
+            this._issleeping = issleeping;
+        }
+    });
+    var person = new Person("张三");
+    var diors = new Programmer("张江男", false);
+    // 打印 true
+    console.log(person.isSleeping());
+    // 打印 false
+    console.log(diors.isSleeping());
+    // 此处全为 true，故打印 true
+    console.log(person instanceof Person && person instanceof Class
+            && diors instanceof Programmer &&
+            diors instanceof Person && diors instanceof Class);
+</script>
+</body>
+</html>

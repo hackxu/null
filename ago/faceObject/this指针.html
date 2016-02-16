@@ -7,13 +7,24 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
     <title>Title</title>
-    <style>
-        *{margin: 0;padding: 0;}
-        .one{ width:23px;height: 23px; overflow: hidden; background: url("images/number.png") no-repeat}
-    </style>
 </head>
 <body>
-<div class="one">
-</div>
+<script>
+    function print(text){
+        console.log(this.value + '-'+text+' ');
+    }
+    var a = {value:10,print:print};
+    var b = {value:20,print:print};
+
+    print('hello');
+
+    a.print('cao');
+    b.print('about');
+    a['print']('a');
+    a.print('one');
+
+    print.call(a,"fuck you");
+    print.apply(a,['sf'])
+</script>
 </body>
 </html>

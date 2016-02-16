@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "我是一个 String 对象 , 我声明在这里 , 但我不是独立存在的！"
+    var obj = {des: "我是一个 Object 对象 , 我声明在这里，我也不是独立存在的。"};
+    var fun = function () {
+        console.log("我是一个 Function 对象！谁调用我，我属于谁：", this);
+    };
+
+    obj.fun = fun;
+
+    console.log(this === window);     // 打印 true
+    console.log(window.str === str);  // 打印 true
+    console.log(window.obj === obj);  // 打印 true
+    console.log(window.fun === fun);  // 打印 true
+//    fun();                              // 打印 我是一个 Function 对象！谁调用我，我属于谁：window
+//    obj.fun();                          // 打印 我是一个 Function 对象！谁调用我，我属于谁：obj
+    fun.apply(str);                   // 打印 我是一个 Function 对象！谁调用我，我属于谁：str
+
+</script>
+</body>
+</html>

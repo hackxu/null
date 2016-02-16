@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name, email, website) {
+        this.name = name;
+        this.email = email;
+        this.website = website;
+    }
+
+    Person.prototype.sayHello = function () {
+        var hello = "Hello, I am " + this.name +
+                "my email is: " + this.email +
+                "my website is: " + this.website;
+        return hello;
+    }
+    function Student(name, email, website, no, dept) {
+        var proto = Object.getPrototypeOf;
+        proto(Student.prototype).constructor.call(this, name, email, website);
+        this.no = no;
+        this.dept = dept;
+    }
+
+    //继承prototype
+    Student.prototype = Object.create(Person.prototype);
+
+    //重置构造函数
+    Student.prototype.constructor = Student;
+
+    //重载sayHello()
+    Student.prototype.sayHello = function () {
+        var proto = Object.getPrototypeOf;
+        var hello = proto(Student.prototype).sayHello.call(this);
+        hello += 'My student no is :' + this.no + "my departent is " + this.dept;
+        return hello;
+    }
+
+    var me = new Student(
+            "Chenhao",
+            "dfafadfda",
+            "fdsfsfdd",
+            "sdfsdfsdfds",
+            "fdfadsfs"
+    )
+    console.log(me.sayHello())
+</script>
+</body>
+</html>

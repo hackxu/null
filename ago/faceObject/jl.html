@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function Person() {
+    }
+    ;
+
+    //Object.create()函数
+    function clone(proto) {
+        function Dummy() {
+        }
+
+        Dummy.prototype = proto;
+        Dummy.prototype.constructor = Dummy;
+
+        return new Dummy();     //等价于Object.create(Person)
+    }
+    var me = clone(Person);
+    console.log(me)
+
+    //defineProperty()函数
+    function defineProperty(target, key, descriptor) {
+        if (descriptor.value) {
+            target[key] = descriptor.value;
+        } else {
+            descriptor.get && target.__defineGetter__(key, descriptor.get);
+            descriptor.set && target.__defineSetter__(key, descriptor.set);
+        }
+        return target;
+    }
+
+    //keys()函数
+    function keys(object) {
+        var result, key, result = [];
+        for (key in object) {
+            if (object.hasOwnProperty(key)) result.push(key)
+        }
+        return result;
+    }
+
+    //    Object.getPrototypeOf()函数
+    function proto(object) {
+        return !object ? null : '__proto__' in object ? object.__proto__ : /*not exposed*/ object.constructor.prototype
+    }
+
+    //bind函数
+    var slice = [].slice;
+    function bind(fn, bound_this) {
+        var bound_args, bound_args = slice.call(arguments, 2);
+        return function () {
+            var args;
+            args = bound_args.concat(slice.call(arguments));
+            return fn.apply(bound_this, args)
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>combination</title>
+</head>
+<body>
+<script>
+    var Person = Object.create(null)
+    function Composition(target, source) {
+        var desc = Object.getOwnPropertyDescriptor;
+        var prop = Object.getOwnPropertyNames;
+        var def_prop = Object.defineProperty;
+
+        prop(source).forEach(
+                function (key) {
+                    def_prop(target, key, desc(source, key))
+                }
+        )
+        return target;
+    }
+
+    //    艺术家
+    var Artist = Object.create(null);
+    Artist.sing = function () {
+        return this.name + 'starts singing...';
+    }
+    Artist.paint = function () {
+        return this.name + 'stars painting...';
+    }
+
+    //运动员
+    var Sporter = Object.create(null);
+    Sporter.ruan = function () {
+        return this.name + 'starts running...';
+    }
+    Sporter.swim = function () {
+        return this.name + 'starts swimming...';
+    }
+
+    Composition(Person, Artist);
+    console.log(Person.sing())
+    console.log(Person.paint())
+
+    Composition(Person, Sporter);
+    console.log(Person.swim())
+    console.log(Person.ruan())
+
+    console.log(Object.keys(Person))
+</script>
+</body>
+</html>

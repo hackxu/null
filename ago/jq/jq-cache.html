@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>jq-cache</title>
+    <script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="w">Aron test</div>
+<script>
+//    $('#w').css("color","#ccc")
+    var $body = $("body");
+    $body.data("foo", 52);
+    console.log($body.data('foo'))
+
+    //    实现解析
+    function Data() {
+        Object.defineProperty(this.cache = {}, 0, {
+            get: function () {
+                return {};
+            }
+        });
+        this.expando = jQuery.expando + Math.random();
+    }
+</script>
+</body>
+</html>
